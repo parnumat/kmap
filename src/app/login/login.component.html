@@ -1,0 +1,54 @@
+<div class="login container">
+    <div class="row">
+        <div class="img col-12">
+            <div class="img">
+                <img src="assets/img/logo.png" style="width: 200px; height: 200px;">
+            </div>
+        </div>
+    </div>
+    <!-- <div class="username row">
+        <div class="all col-12">
+            <div class="row">
+                <div class="iconBox col-2">
+                    <img src="assets/img/empcode.png" style="width: 20px; height: 20px;" class="icon">
+                </div>
+                <div class="formBox col-10">
+                    <input class="empCode" type="text" style="border: none;" placeholder="รหัสพนักงาน">
+                </div>
+               
+            </div>
+        </div>
+    </div> -->
+    <div class="usernamePassword row">
+        <div class="all col-12">
+            <div class="boxInput">
+                <!--กล่องใหญ่-->
+                <div class="iconBox">
+                    <img src="assets/img/empcode.png" style="width: 15px; height: 15px;" class="icon">
+                </div>
+                <div class="formBox">
+                    <input class="empCode" type="text" style="border: none; font-size: 1em;" placeholder="รหัสพนักงาน" [(ngModel)]="model.userId">
+                </div>
+
+            </div>
+            <div class="boxPassword">
+                <!--กล่องใหญ่-->
+                <div class="iconBox">
+                    <img src="assets/img/password.png" style="width: 15px; height: 15px;" class="icon">
+                </div>
+                <div class="formBox">
+                    <input class="password" type="password" style="border: none; font-size: 1em;" placeholder="รหัสผ่าน" [(ngModel)]="model.pass" (keypress)="keyEnter($event)">
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="Button col-12">
+            <button class="loginButton" (click)="login()" type="submit" [disabled]="!model.userId && !model.pass">
+            <img src="assets/img/login.png" style="width: 25px; height: 25px;">
+                เข้าสู่ระบบ</button>
+        </div>
+    </div>
+
+</div>

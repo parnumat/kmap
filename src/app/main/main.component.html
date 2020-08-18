@@ -1,0 +1,136 @@
+<div class="white-background container">
+    <!-- <alert type="success">hello</alert> -->
+    <!-- <input type="text" class="btn btn-primary"> -->
+    <!-- <button class="btn btn-info">test</button> -->
+
+    <!-- [(ngModel)]="searchText"  -->
+    <div class="search row">
+        <div class="col-12">
+            <div class="row">
+
+                <div class="col-10 inputBox">
+                    <input type="text" name="search" #searchMenu autocomplete="off" placeholder=ค้นหาแอปพลิเคชัน
+                        style="border: none;" class="form-control">
+                    <!-- <input type="text" name="search" 
+                    [ngModel]="searchText"
+                    (ngModelChange)="searchText = $event;onSearchChanged()"
+                    autocomplete="off"
+                        placeholder=ค้นหาแอปพลิเคชัน style="border: none;" class="form-control"> -->
+                </div>
+                <div class="col-2 searchIcon">
+                    <img src="assets/img/search.png" class="img-fluid">
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="category col-6">
+            หมวดหมู่:
+        </div>
+        <!-- <div class="col-6" dropdown>
+            <button dropdownToggle type="button" class="sort dropdown-toggle" > เรียงตาม
+                <img src="assets/img/sort.png" class="img-fluid">
+            </button>
+            <ul  *dropdownMenu class="dropdown-menu" >
+                <li><a class="dropdown-item" href="#">ใช้ประจำ</a></li>
+                <li><a class="dropdown-item" >เวลา</a></li>
+                <li><a class="dropdown-item" >อักษร</a></li>
+            </ul>
+        </div> -->
+    </div>
+
+
+    <div class="cat row">
+        <div class="all col-12">
+            <div class="everyButton">
+
+                <button (click)="getMockMenu('ALL')"
+                    [ngClass]="{'blueButton': checkBtn === 'ALL','whiteButton': checkBtn != 'ALL'}">
+                    <img *ngIf="checkBtn ==='ALL'" src="assets/img/all.png" class="img-fluid">
+                    <img *ngIf="checkBtn !== 'ALL'" src="assets/img/allblack.png" class="img-fluid">
+                    ทั้งหมด
+                </button>
+
+                <button (click)="getMockMenu('1')"
+                    [ngClass]="{'blueButton': checkBtn === '1','whiteButton': checkBtn != '1'}">
+                    <img *ngIf="checkBtn ==='1'" src="assets/img/documentwhite.png" class="img-fluid">
+                    <img *ngIf="checkBtn !== '1'" src="assets/img/document.png" class="img-fluid">
+                    เอกสาร
+                </button>
+
+                <button (click)="getMockMenu('2')"
+                    [ngClass]="{'blueButton': checkBtn === '2','whiteButton': checkBtn != '2'}">
+                    <img *ngIf="checkBtn ==='2'" src="assets/img/repairwhite.png" class="img-fluid">
+                    <img *ngIf="checkBtn !== '2'" src="assets/img/repair.png" class="img-fluid">
+                    การซ่อม
+                </button>
+
+                <button (click)="getMockMenu('3')"
+                    [ngClass]="{'blueButton': checkBtn === '3','whiteButton': checkBtn != '3'}">
+                    <img *ngIf="checkBtn ==='3'" src="assets/img/statwhite.png" class="img-fluid">
+                    <img *ngIf="checkBtn !== '3'" src="assets/img/static.png" class="img-fluid">
+                    ยอดขาย
+                </button>
+
+            </div>
+        </div>
+    </div>
+
+    <div>
+        <ng-container #outlet> </ng-container>
+    </div>
+    <ng-template #content>
+        <app-menurender [slides]="slides" [menuAdmin]="menuAdmin"></app-menurender>
+    </ng-template>
+    <!-- (indexChange)="onIndexChange($event)"  -->
+    <!-- <swiper class="swiper-container" pagination-type="bullets" [config]="config" (indexChange)="onIndexChange($event)" fxFlex="auto">
+        <div *ngFor="let slide of slides; let iS=index" class="swiper-slide">
+            <div class="allapp row">
+                <div class="col-12">
+                    <div class="first row">
+                        <div class="items-1 col-4" *ngFor="let menua of menuAdmin | slice:iS*9:(iS*9) + 9;  let i=index">
+                            <div>
+                                <img [src]="menua.img" style="width: 50px; height: 50px; " class="img-fluid">
+                                <p>{{menua.appName}}</p>
+                            </div>
+                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+      </swiper> -->
+    <!-- <div class="swiper-pagination" [hidden]="config.pagination === false"></div> -->
+
+    <!-- <div class="swiper-container" [swiper]="config"> -->
+    <!-- <div class="swiper-container" [swiper]="config">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide">
+                <div class="allapp row">
+                    <div class="col-12">
+                        <div class="first row">
+                            <div class="items-1 col-4" *ngFor="let menua of menuAdmin">
+                                <img [src]="menua.img" style="width: 50px; height: 50px; " class="img-fluid">
+                                <p>{{menua.appName}}</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="swiper-slide">
+                <div class="allapp row">
+                    <div class="col-12">
+                        <div class="first row">
+                            <div class="items-1 col-4" *ngFor="let menua of menuAdmin">
+                                <img [src]="menua.img" style="width: 50px; height: 50px; " class="img-fluid">
+                                <p>{{menua.appName}}</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="swiper-scrollbar"></div>
+
+    </div> -->
+</div>

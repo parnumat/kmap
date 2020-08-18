@@ -1,0 +1,32 @@
+h1{
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 24px;
+    padding-top: 1rem;
+}
+.header{
+    display: inline;
+}
+.position{
+    font-size: 14px;
+    color: white;
+
+}
+.img-fluid{
+    max-width: 100%;
+    height: auto;
+}
+
+.logout{
+  float: right;
+}
+
+.icon{
+    float: left;
+    margin-left: 1rem;
+    margin-right: 1rem;
+    margin-top: 1rem;;
+}
+.second{
+    display: inline;
+}
