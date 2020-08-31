@@ -6,7 +6,7 @@
                     <div class="items-1 col-4" *ngFor="let menua of menuAdmin | slice:iS*9:(iS*9) + 9;  let i=index">
                         <div (click)="onMenuClicked(menua.urlPath)">
                             <img [src]="menua.img" style="width: 50px; height: 50px; " class="img-fluid">
-                            <p>{{menua.appName}}</p>
+                            <p style="font-family: 'promptregular';">{{menua.appName}}</p>
                         </div>
                         
                     </div>

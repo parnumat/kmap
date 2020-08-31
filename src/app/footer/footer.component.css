@@ -9,24 +9,20 @@
     padding-right: 0rem;
 }
 .bar{
-    margin-left: 0.0625rem;
-    margin-right: 0.0625rem;
     text-align: center;
     vertical-align: middle;
 }
 .Home{
-    width: 3.125rem;
-    height: 3.125rem;
+    height: 7vh;
     text-align: center;
     padding: 0.125rem 0.125rem;
-    margin: 0.125rem 0.3125rem;
     text-align: center;
     vertical-align: middle;
 }
 .Home p{
     color: white;
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 0.875em;
+    font-family: 'promptregular';
+    font-size: 15px;
     text-align: center;
     vertical-align: middle;
 }

@@ -8,13 +8,12 @@
     background-size: cover;
     height: 100%;
     position: fixed;
-    margin-top: 0.5rem;
+    margin-top: 0vh;
     border-radius: 0rem 3rem 0rem 0rem;
 }
 
 .search{
-    margin-top: 0.5rem;
-    margin-bottom: 0rem;
+    margin-top: 0.5vh;
     height: 3rem;
     position: relative;
    
@@ -28,24 +27,23 @@
     border: 1px solid #797979;
     box-shadow: 0rem 0.2rem 0.2rem 0rem #bbbbbb;
     border-radius: 1.25rem;
-    margin-left: 1.25rem;
+    margin-left: 6vw;
  }
 
  .searchIcon{
-     margin-left: -3.2rem;
-     margin-top: 0.5rem;
+     margin-top: -4.5vh;
  }
  .category{
-     font-family: Arial, Helvetica, sans-serif;
+     font-family: 'promptregular';
      font-size: 1em;
      float: left;
-     margin-left: 1rem;
+     margin-left: 3vw;
  }
  .auto{
      align-items: center;
  }
  .sort{
-     font-family: Arial, Helvetica, sans-serif;
+     font-family: 'promptregular';
      float: right;
      border: none;
      border-radius: 0.25rem;
@@ -54,7 +52,7 @@
  }
 
  .whiteButton{
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: 'promptregular';
     border: none;
     border-radius: 0.25rem;
     background: white;
@@ -66,7 +64,7 @@
     justify-content: center;
  }
  .blueButton{
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: 'promptregular';
     border: none;
     border-radius: 0.25rem;
     background: #5160E7;
@@ -106,6 +104,7 @@
     align-items: center;
     float: center;
     padding-bottom: 0;
+    font-family: 'promptregular';
 }
 .swiper-container {
   display: flex;
@@ -120,4 +119,7 @@
     text-align: center;
     vertical-align: middle; 
     justify-content:space-around;
+}
+::placeholder{
+    font-family: 'promptregular';
 }

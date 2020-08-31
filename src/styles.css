@@ -1,6 +1,52 @@
 /* You can add global styles to this file, and also import other style files */
 @import "bootstrap/dist/css/bootstrap.css";
 @import 'swiper/css/swiper.min.css';
+
+
+@font-face {
+    font-family: 'promptbold';
+    src: url('./assets/font/prompt-bold-webfont.woff2') format('woff2'),
+         url('./assets/font/prompt-bold-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+
+
+
+@font-face {
+    font-family: 'promptsemibold';
+    src: url('./assets/font/prompt-semibold-webfont.woff2') format('woff2'),
+         url('./assets/font/prompt-semibold-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+
+
+
+@font-face {
+    font-family: 'promptmedium';
+    src: url('./assets/font/prompt-medium-webfont.woff2') format('woff2'),
+         url('./assets/font/prompt-medium-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+
+
+
+@font-face {
+    font-family: 'promptregular';
+    src: url('./assets/font/prompt-regular-webfont.woff2') format('woff2'),
+         url('./assets/font/prompt-regular-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
 body{
     background: linear-gradient( #2E3448,#400D44);
     font-family: Arial, Helvetica, sans-serif;

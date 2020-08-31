@@ -45,7 +45,8 @@ responseAdmin = {
     }
 };
 
-constructor(private router: Router,
+constructor(
+  private router: Router,
   private authService: AuthService,
   private toastrService: ToastrService){}
   
@@ -86,7 +87,7 @@ constructor(private router: Router,
     // );
 
 
-  }
+    }
 
   keyEnter(event:KeyboardEvent) {
    
@@ -101,17 +102,29 @@ constructor(private router: Router,
   login() {
     
     this.loading = true;
-    this.authService.login(this.model);
+    this.authService.login(this.model).subscribe(res=>{
+      console.log(res);
+      // this.toastrService.success('เข้าสู่ระบบเรียบร้อย');
+    },(err)=> {
+      this.toastrService.error('เข้าสู่ระบบไม่ถูกต้อง');
+  },()=>{
     
-    // .subscribe(next => {
+      this.router.navigate(['/layout']);
+    });
+
+    // this.loading = true;
+    
+    // this.authService.login(this.model).subscribe(next => {
     //   this.toastrService.success('เข้าสู่ระบบเรียบร้อย');
     // }, error => {
-    //   this.toastrService.error('เข้าสู่ระบบไม่ถูกต้อง');
+    //   this.toastrService.error('ข้อมูลเข้าสู่ระบบไม่ถูกต้อง');
+
     //   this.loading = false;
     // }, () => {
     //   this.router.navigate(['/layout']);
     //   this.loading = false;
     // });
+  
   }
   
 }
