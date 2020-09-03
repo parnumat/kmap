@@ -28,21 +28,13 @@ export class AuthService {
       username : model.userId,
       password: model.pass
     }
-
-   // window.open("http://portal.kimpai.com/portal/loginJWT.aspx?token=dfsdfsdf", "_blank");
-
-    // this.http.post("http://portal.kimpai.com/portal/service/login.ashx", payload2).subscribe(response => {
-    //   debugger;
-    //   console.log(response);
-    // });
-
     console.log('a',this.baseUrl);
-   
+
      return this.http.post(this.baseUrl, payload).pipe(map(response => {
        const user = response;
-   
+
        if (response && response['token']) {
-            localStorage.setItem('userId', response['userID']); //เก็บข้อมูลใน localstorage 
+            localStorage.setItem('userId', response['userID']); //เก็บข้อมูลใน localstorage
             localStorage.setItem('userName', response['userName']);
             localStorage.setItem('email', response['email']);
             localStorage.setItem('nickname', response['nickname']);
@@ -52,36 +44,19 @@ export class AuthService {
             this.toastrService.success('เข้าสู่ระบบเรียบร้อย');
             this.router.navigate(['/layout']);
           }
-          // else{
-            // this.toastrService.error('เข้าสู่ระบบไม่ถูกต้อง');
-            // this.router.navigate(['/login']); //ก่อนประกาศเชื่อมหน้า router.navigate ต้องประกาศ private router: Router ก่อน
-          // }
      }));
-    // .subscribe(response => {
-    //   if (response && response['token']) {
-    //     localStorage.setItem('userId', response['userID']); //เก็บข้อมูลใน localstorage 
-    //     localStorage.setItem('userName', response['userName']);
-    //     localStorage.setItem('email', response['email']);
-    //     localStorage.setItem('nickname', response['nickname']);
-    //     localStorage.setItem('orgId', response['org']);
-    //     localStorage.setItem('posRole', response['posrole']);
-    //     localStorage.setItem('token', response['token']);
-    //     this.toastrService.success('เข้าสู่ระบบเรียบร้อย');
-    //     this.router.navigate(['/layout']);
-    //   }else{
-    //     this.toastrService.error('เข้าสู่ระบบไม่ถูกต้อง');
-    //     this.router.navigate(['/login']); //ก่อนประกาศเชื่อมหน้า router.navigate ต้องประกาศ private router: Router ก่อน
-    //   }
-    // });
   }
 
  getCurrentUser() {
    return localStorage.getItem('userName'); //ดึงข้อมูลออกมา
-  
- }   
+
+ }
+ getPositionUserId(){
+  return localStorage.getItem('userId');
+ }
  getPositionUser(){
   return localStorage.getItem('userId');
- }          
+ }
 getToken(){
   return localStorage.getItem('token');
 }

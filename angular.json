@@ -130,6 +130,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "kmap"
+    }
+  },
+  "defaultProject": "kmap",
+  "cli": {
+    "analytics": false
+  }
 }

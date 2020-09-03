@@ -1,110 +1,111 @@
-*{
-    font-family: Arial, Helvetica, sans-serif;
-    font-size:16px ;
+* {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 16px;
 }
-.white-background{
-    display: flex;
-    background-color: white;
-    background-size: cover;
-    height: 100%;
-    position: fixed;
-    margin-top: 0vh;
-    border-radius: 0rem 3rem 0rem 0rem;
-}
-
-.search{
-    margin-top: 0.5vh;
-    height: 3rem;
-    position: relative;
-   
+.white-background {
+  display: flex;
+  background-color: white;
+  background-size: cover;
+  height: 100%;
+  position: fixed;
+  margin-top: 0vh;
+  border-radius: 0rem 3rem 0rem 0rem;
 }
 
-  .img-fluid{
-      max-width: 100%;
-      height: auto;
-  }
- .inputBox{
-    border: 1px solid #797979;
-    box-shadow: 0rem 0.2rem 0.2rem 0rem #bbbbbb;
-    border-radius: 1.25rem;
-    margin-left: 6vw;
- }
-
- .searchIcon{
-     margin-top: -4.5vh;
- }
- .category{
-     font-family: 'promptregular';
-     font-size: 1em;
-     float: left;
-     margin-left: 3vw;
- }
- .auto{
-     align-items: center;
- }
- .sort{
-     font-family: 'promptregular';
-     float: right;
-     border: none;
-     border-radius: 0.25rem;
-     background: white;
-     box-shadow: 0rem 0.25rem 0.25rem 0rem #8a8b8f;
- }
-
- .whiteButton{
-    font-family: 'promptregular';
-    border: none;
-    border-radius: 0.25rem;
-    background: white;
-    box-shadow: 0rem 0.25rem 0.25rem 0rem #8a8b8f;
-    margin: 0.9375rem 0.625rem;
-    width: 6.25rem ;
-    align-content: center;
-    align-items: center;
-    justify-content: center;
- }
- .blueButton{
-    font-family: 'promptregular';
-    border: none;
-    border-radius: 0.25rem;
-    background: #5160E7;
-    color: white;
-    box-shadow: 0rem 0.25rem 0.25rem 0rem #8a8b8f;
-    margin: 0.9375rem 0.625rem;
-    width: 6.25rem ;
-    align-content: center;
-    align-items: center;
-    justify-content: center;
- }
- .everyButton{
-     overflow-x: scroll;
-     overflow-y: hidden;
-     white-space: nowrap;
-     flex-wrap: wrap;
-     justify-content: space-between;
-     align-content: center;
-     align-items: center;
-   
-
- }
-
-.items-1{
-    width: 2rem;
-    height: 7rem;
-    flex-wrap: wrap;
-    text-align: center;
-    vertical-align: middle; 
-    justify-content:space-around;
-    
+.search {
+  margin-top: 5px;
+  height: 40px;
+  position: relative;
 }
-.p{
-    text-align: center;
-    justify-content: space-around;
-    align-content: space-around;
-    align-items: center;
-    float: center;
-    padding-bottom: 0;
-    font-family: 'promptregular';
+
+.img-fluid {
+  max-width: 100%;
+  height: auto;
+}
+.inputBox {
+  border: 1px solid #797979;
+  box-shadow: 0rem 0.2rem 0.2rem 0rem #bbbbbb;
+  border-radius: 1.25rem;
+  /* margin-left: 6vw; */
+  margin-left: 10px;
+}
+
+.searchIcon {
+  /* margin-top: -4.5vh; */
+  margin-top: -4.5vh;
+}
+.category {
+  font-family: "promptregular";
+  font-size: 1em;
+  padding-left: 1em;
+  padding-right: 1em;
+  height: 60px;
+}
+.auto {
+  align-items: center;
+}
+.sort {
+  font-family: "promptregular";
+  float: right;
+  border: none;
+  border-radius: 0.25rem;
+  background: white;
+  box-shadow: 0rem 0.25rem 0.25rem 0rem #8a8b8f;
+}
+
+.whiteButton {
+  font-family: "promptregular";
+  border: none;
+  border-radius: 0.25rem;
+  background: white;
+  box-shadow: 0rem 0.25rem 0.25rem 0rem #8a8b8f;
+  margin: 0.9375rem 0.625rem;
+  width: 6.25rem;
+  align-content: center;
+  align-items: center;
+  justify-content: center;
+}
+.blueButton {
+  font-family: "promptregular";
+  border: none;
+  border-radius: 0.25rem;
+  background: #5160e7;
+  color: white;
+  box-shadow: 0rem 0.25rem 0.25rem 0rem #8a8b8f;
+  margin: 0.9375rem 0.625rem;
+  width: 6.25rem;
+  align-content: center;
+  align-items: center;
+  justify-content: center;
+}
+.everyButton {
+  width: 100%;
+  overflow-x: scroll;
+  overflow-y: hidden;
+  white-space: nowrap;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-content: center;
+  align-items: center;
+  scroll-behavior: smooth;
+}
+
+.items-1 {
+  width: 2rem;
+  height: 7rem;
+  flex-wrap: wrap;
+  text-align: center;
+  vertical-align: middle;
+  justify-content: space-around;
+}
+.p {
+  text-align: center;
+  justify-content: space-around;
+  align-content: space-around;
+  align-items: center;
+  float: center;
+  padding-bottom: 0;
+  font-family: "promptregular";
 }
 .swiper-container {
   display: flex;
@@ -115,11 +116,15 @@
   left: 0;
 }
 
-.allapp{
-    text-align: center;
-    vertical-align: middle; 
-    justify-content:space-around;
+.allapp {
+  text-align: center;
+  vertical-align: middle;
+  justify-content: space-around;
 }
-::placeholder{
-    font-family: 'promptregular';
+::placeholder {
+  font-family: "promptregular";
+}
+
+.mymenu-render {
+  height: 100vh;
 }

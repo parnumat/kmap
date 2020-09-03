@@ -1,0 +1,13 @@
+.layout {
+    display: flex;
+    flex-direction: column;
+    /* border: green 2px solid; */
+}
+
+.mymain {
+    /* margin-top: 100px;
+    margin-bottom: 7vh; */
+    /* height: 100vh; */
+    flex-grow: 1;
+}
+

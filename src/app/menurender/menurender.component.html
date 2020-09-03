@@ -1,18 +1,22 @@
-<swiper class="swiper-container" pagination-type="bullets" [config]="config" fxFlex="auto">
-    <div *ngFor="let slide of slides; let iS=index" class="swiper-slide">
-        <div class="allapp row">
-            <div class="col-12">
-                <div class="first row">
-                    <div class="items-1 col-4" *ngFor="let menua of menuAdmin | slice:iS*9:(iS*9) + 9;  let i=index">
-                        <div (click)="onMenuClicked(menua.urlPath)">
-                            <img [src]="menua.img" style="width: 50px; height: 50px; " class="img-fluid">
-                            <p style="font-family: 'promptregular';">{{menua.appName}}</p>
-                        </div>
-                        
-                    </div>
-                </div>
-            </div>
-        </div>
+<div
+  class="allapp row"
+  (swipeUp)="onSwipeUp($event)"
+  (swipeleft)="onSwipeLeft($event, -1)"
+  (swiperight)="onSwipeRight($event, 1)"
+>
+  <div
+    class="items-1 col-4"
+    *ngFor="let menua of informationState; let i = index"
+  >
+    <div (click)="onMenuClicked(menua.urlPath)">
+      <img
+        [src]="menua.img"
+        style="width: 50px; height: 50px"
+        class="img-fluid"
+      />
+      <p class="txt-icon" style="font-family: 'promptregular'">
+        {{ menua.appName }}
+      </p>
     </div>
-  </swiper>
-  <!-- <div class="swiper-pagination" [hidden]="config.pagination === false"></div> -->
+  </div>
+</div>

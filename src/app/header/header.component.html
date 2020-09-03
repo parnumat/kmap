@@ -1,55 +1,20 @@
-<div class="container">
-    <div class="header row">
-        <div class="logout col-2">
-            <img src="assets/img/sign out.png" width="37" height="37" (click)="logOut()">
-        </div>
-    </div>
-    <div class="second row">
-        <div class="icon col-2">
-            <img src="assets/img/user.png" width="50" height="50">
-        </div>
-        <div class="col-10 offset-2">
-            <div class="text row">
-                <div class="title col-12">
-                    <h1>
-                        {{title}}
-                    </h1>
-                </div>
-                <div class="position col-12">
-                    <p>
-                        {{positionDetail}}
-                    </p>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- <div class="header row">
-         <div class="icon col-1">
-            <img src="assets/img/user.png" width="45" height="45">
-        </div>
-        <div class="head col-8">
-            <h1>
-                {{title}}                                
-            </h1>
-    </div>
-        <div class="logout col-2">
-            <img src="assets/img/sign out.png" width="37" height="37" (click)="logOut()">
-
-        </div>
-    </div>
-    <div class="row">
-       
-        <div class="col-11">
-            <div class="position">
-                <p>
-                   {{positionDetail}}
-                </p>
-            </div>
-        </div>
-      
-    </div> -->
+<div class="logout p-2">
+  <img
+    src="assets/img/sign out.png"
+    width="37"
+    height="37"
+    (click)="logOut()"
+  />
 </div>
-
-<!-- <div class="logout">
-    <img src="assets/img/sign out.png">
-</div> -->
+<div class="container">
+  <div class="header pt-4">
+    <div class="icon pb-2">
+      <img src="assets/img/user.png" width="50" height="50" />
+    </div>
+    <div class="title-text pr-2 pt-1">
+      <h1 class="txt-too-long">
+        {{ title }}
+      </h1>
+    </div>
+  </div>
+</div>

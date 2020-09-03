@@ -1,31 +1,51 @@
-h1{
-    color: white;
-    font-family: 'promptbold';
-    font-size: 22px;
+h1 {
+  color: white;
+  font-family: "promptbold";
+  font-size: 22px;
 }
-.header{
-    display: inline;
+.header {
+  display: flex;
+  justify-content: start;
+  padding-bottom: 10px;
 }
-.position{
-    font-family: 'promptsemibold';
-    color: white;
-
+.position {
+  font-family: "promptsemibold";
+  color: white;
 }
-.img-fluid{
-    max-width: 100%;
-    height: auto;
-}
-
-.logout{
-  float: right;
+.img-fluid {
+  max-width: 100%;
+  height: auto;
 }
 
-.icon{
-    float: left;
-    margin-left: 1vw;
-    margin-right: 1vw;
-    margin-top: 1vh;
+.logout {
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+  position: absolute;
 }
-.second{
-    display: inline;
+
+.icon {
+  margin-left: 1rem;
+  margin-right: 1rem;
+}
+.second {
+  display: flex;
+  justify-content: row;
+}
+
+.title-text {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+
+p {
+  margin: 0;
+}
+
+.txt-too-long {
+  width: 160px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
