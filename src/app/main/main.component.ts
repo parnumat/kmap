@@ -86,6 +86,7 @@ export class mainComponent {
   ngOnInit() {
     this.subjectSub = this.menuService.subject.subscribe((data) => {
       this.checkBtn = data;
+      console.log(this.checkBtn);
       this.searchMenuInput.nativeElement.value = '';
       let scrollSlice = 0;
       if (data !== 'ALL' && data !== '1') {
@@ -93,11 +94,10 @@ export class mainComponent {
       }
       $('.everyButton').scrollLeft(scrollSlice);
     });
+    const dataAll = this.menuAdmin;
 
-    this.onGroupChanged('ALL');
+    this.getMenu('ALL');
     this.userDetail = JSON.parse(localStorage.getItem('userDetail'));
-    console.log(this.userDetail);
-    this.getMenuInfo(this.group_id);
     fromEvent(this.searchMenuInput.nativeElement, 'keyup')
       .pipe(
         map((event: any) => {
@@ -114,6 +114,7 @@ export class mainComponent {
         this.fiterText = text;
         this.onSearchChanged(text);
       });
+
   }
   prepareRoute(outlet: RouterOutlet) {
     return (
@@ -122,9 +123,9 @@ export class mainComponent {
   }
 
   getMenuInfo(group_id: string) {
-    this.groupPos = this.groupList.findIndex((r) => r === group_id);
+    this.groupPos = this.groupList.findIndex((r) => r == group_id);
     this.group_id = group_id;
-    this.checkBtn = group_id;
+    // this.checkBtn = group_id;
     this.user_id = window.localStorage.getItem('userId');
     this.kmapService.getMenuItem(this.user_id, group_id).subscribe((result) => {
       this.menuObject = [...(result as IMenu[])];
@@ -136,7 +137,7 @@ export class mainComponent {
   }
 
   onSearchChanged(searchText: string) {
-    this.menuService.menuFilter(searchText);
+    this.menuService.searchMenuFilter(searchText);
   }
 
   onMenuChanged() {
@@ -150,9 +151,14 @@ export class mainComponent {
     console.log('Swiper index: ', index);
   }
 
-  onGroupChanged($event) {
+  getMenu($event) {
     this.searchMenuInput.nativeElement.value = '';
     this.menuService.changeGroup($event);
+  }
+  onGroupsFilter($event) {
+    this.searchMenuInput.nativeElement.value = '';
+    this.menuService.subject.next($event);
+    this.menuService.filterGroup($event);
   }
 }
 

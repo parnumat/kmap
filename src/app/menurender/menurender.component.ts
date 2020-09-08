@@ -11,11 +11,10 @@ import { IMenu } from '../main/main.component';
   styleUrls: ['./menurender.component.css']
 })
 export class MenurenderComponent implements OnInit {
-  // informationState= history.state;
-  informationState: any;
-  // @Output() onGroupChanged = new EventEmitter<string>();
 
+  informationState: any;
   scrolling: boolean;
+  menuSub: any;
 
   public config: SwiperConfigInterface = {
     direction: 'horizontal',
@@ -27,16 +26,14 @@ export class MenurenderComponent implements OnInit {
     pagination: true
   };
 
-  menuSub: any;
-
-
   constructor(private auth: AuthService, private router: Router
     , private activatedRoute: ActivatedRoute
     , private menuService: MenuService
     , private route: ActivatedRoute
-    , private zone:NgZone) {
+    , private zone: NgZone) {
     this.scrolling = false;
   }
+
   ngOnDestroy() {
     this.menuSub.unsubscribe();
   }
@@ -53,18 +50,9 @@ export class MenurenderComponent implements OnInit {
     this.router.navigate(['/apprender', { path: urlPath }]);
   }
 
-  // onScroll(event: Event) {
-  //   if ((event.target as HTMLElement).scrollLeft > 0)
-  //     this.onGroupChanged.emit("left");
-  //   else
-  //     this.onGroupChanged.emit("right");
-  // }
-
-
   onSwipeRight(event, data) {
     console.log("event right", event);
     this.menuService.menuSwipe('right');
-
   }
 
   onSwipeLeft(event, data) {
@@ -74,8 +62,5 @@ export class MenurenderComponent implements OnInit {
   }
   onSwipeUp(event) {
     console.log("event up", event);
-
   }
-
-
 }

@@ -17,10 +17,8 @@ export class headerComponent {
   ngOnInit(){
     this.title = this.auth.getCurrentUser();
     this.positionDetail=this.auth.getPositionUser();
-    // console.log(this.userDetail);
     // this.title = this.userDetail.user_name;
     // this.userPosition = this.userDetail.unit_desc;
-    // console.log(this.titleName);
     // this.title = this.titleName;
     // this.userPosition=this.positionName;
     // this.test = localStorage.getItem('userDetail');

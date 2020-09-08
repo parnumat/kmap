@@ -1,7 +1,7 @@
-* {
+/* * {
   font-family: Arial, Helvetica, sans-serif;
   font-size: 16px;
-}
+} */
 .white-background {
   display: flex;
   background-color: white;
@@ -35,7 +35,6 @@
   margin-top: 0.5rem;
 }
 .category {
-  font-family: Arial, Helvetica, sans-serif;
   font-size: 1em;
   float: left;
   margin-left: 1rem;
@@ -44,7 +43,6 @@
   align-items: center;
 }
 .sort {
-  font-family: Arial, Helvetica, sans-serif;
   float: right;
   border: none;
   border-radius: 0.25rem;
@@ -53,7 +51,6 @@
 }
 
 .whiteButton {
-  font-family: Arial, Helvetica, sans-serif;
   border: none;
   border-radius: 0.25rem;
   background: white;
@@ -65,7 +62,6 @@
   justify-content: center;
 }
 .blueButton {
-  font-family: Arial, Helvetica, sans-serif;
   border: none;
   border-radius: 0.25rem;
   background: #5160e7;
@@ -92,6 +88,7 @@
   text-align: center;
   vertical-align: middle;
   justify-content: space-around;
+  padding-top: 10px;
 }
 .p {
   text-align: center;
@@ -119,14 +116,15 @@
   overflow-y: scroll;
   height: 100vh;
   scroll-behavior: smooth;
-  padding-bottom: 260px;
+  padding-bottom: 200px;
 }
 .txt-icon {
-  font-size: 11px;
   width: 100%;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
   height: 20px;
   line-height: 20px;
+  font-family: 'promptregular';
+  font-size:14pt;
 }

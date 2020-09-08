@@ -44,8 +44,9 @@ p {
 }
 
 .txt-too-long {
-  width: 160px;
+  width: 200px;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
+  font-size: 18pt;
 }

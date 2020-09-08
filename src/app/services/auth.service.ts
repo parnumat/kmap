@@ -28,8 +28,6 @@ export class AuthService {
       username : model.userId,
       password: model.pass
     }
-    console.log('a',this.baseUrl);
-
      return this.http.post(this.baseUrl, payload).pipe(map(response => {
        const user = response;
 

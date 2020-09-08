@@ -1,19 +1,19 @@
-* {
-  font-family: Arial, Helvetica, sans-serif;
+/* * {
+  font-family: 'promptmedium';
   font-size: 16px;
-}
+} */
 .white-background {
   display: flex;
   background-color: white;
   background-size: cover;
   height: 100%;
-  position: fixed;
+  /* position: fixed; */
   margin-top: 0vh;
-  border-radius: 0rem 3rem 0rem 0rem;
+  border-radius: 0rem 2rem 0rem 0rem;
 }
 
 .search {
-  margin-top: 5px;
+  margin-top: 15px;
   height: 40px;
   position: relative;
 }
@@ -21,13 +21,14 @@
 .img-fluid {
   max-width: 100%;
   height: auto;
+  margin-top: -7px;
 }
 .inputBox {
   border: 1px solid #797979;
   box-shadow: 0rem 0.2rem 0.2rem 0rem #bbbbbb;
   border-radius: 1.25rem;
   /* margin-left: 6vw; */
-  margin-left: 10px;
+  margin: auto;
 }
 
 .searchIcon {
@@ -40,6 +41,7 @@
   padding-left: 1em;
   padding-right: 1em;
   height: 60px;
+  margin-top: 2px;
 }
 .auto {
   align-items: center;
@@ -55,31 +57,33 @@
 
 .whiteButton {
   font-family: "promptregular";
+  font-size:14pt;
   border: none;
   border-radius: 0.25rem;
   background: white;
   box-shadow: 0rem 0.25rem 0.25rem 0rem #8a8b8f;
-  margin: 0.9375rem 0.625rem;
-  width: 6.25rem;
+  margin: 8px 8px;
+  /* width: 6.25rem; */
   align-content: center;
   align-items: center;
   justify-content: center;
 }
 .blueButton {
   font-family: "promptregular";
+  font-size:14pt;
   border: none;
   border-radius: 0.25rem;
   background: #5160e7;
   color: white;
   box-shadow: 0rem 0.25rem 0.25rem 0rem #8a8b8f;
   margin: 0.9375rem 0.625rem;
-  width: 6.25rem;
+  /* width: 6.25rem; */
   align-content: center;
   align-items: center;
   justify-content: center;
 }
 .everyButton {
-  width: 100%;
+  /* width: 100%; */
   overflow-x: scroll;
   overflow-y: hidden;
   white-space: nowrap;

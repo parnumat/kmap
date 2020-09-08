@@ -11,21 +11,19 @@ import { of } from 'rxjs';
 export class KmapService {
   baseUrl = environment.apiUrl;
   constructor(private http: HttpClient,private extensionsService:ExtensionsService) {}
-  
+
 
   getMenuItem(userData:string,typeData:string){
-    // debugger;
-    //console.log('asd')
     // let model = { user_id:data,
     //               password: '0',
     //               org:'OPP'};
-    
+
     let model = {
-      fn:"getMockMenu",
+      fn:"getMenuInfo",
       group_id: typeData,
       user_id:userData
     };
-    
+
     // return this.http.post('http://192.168.55.53:1188/api/test/',model);
     //return this.http.post('https://localhost:5001/api/test',model);
     return this.http.post(`${this.baseUrl}menu`,model);
@@ -38,5 +36,5 @@ export class KmapService {
 
   //   return http.toPromise();
   // }
-  
+
 }

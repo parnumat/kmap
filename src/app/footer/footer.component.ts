@@ -14,7 +14,6 @@ ngOnInit(){
 
 // onMessageClick(click: EventEmitter){
 //   var test = 'testt';
-//   console.log(click);
 //   this.eventOut.emit(test);
 // }
 }

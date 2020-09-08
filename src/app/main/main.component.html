@@ -18,54 +18,55 @@
   <div class="row category">
     <div class="everyButton">
       <button
-        (click)="onGroupChanged('ALL')"
+        (click)="onGroupsFilter('ALL')"
         [ngClass]="{
-          blueButton: checkBtn === 'ALL',
+
+          blueButton: checkBtn == 'ALL',
           whiteButton: checkBtn != 'ALL'
         }"
       >
-        <img
-          *ngIf="checkBtn === 'ALL'"
+        <!-- <img
+          *ngIf="checkBtn == 'ALL'"
           src="assets/img/all.png"
           class="img-fluid"
-        />
-        <img
-          *ngIf="checkBtn !== 'ALL'"
+        /> -->
+        <!-- <img
+          *ngIf="checkBtn != 'ALL'"
           src="assets/img/allblack.png"
           class="img-fluid"
-        />
+        /> -->
         ทั้งหมด
       </button>
 
       <button
-        (click)="onGroupChanged('1')"
+        (click)="onGroupsFilter('1')"
         [ngClass]="{
-          blueButton: checkBtn === '1',
+          blueButton: checkBtn == '1',
           whiteButton: checkBtn != '1'
         }"
       >
-        <img
-          *ngIf="checkBtn === '1'"
+        <!-- <img
+          *ngIf="checkBtn == '1'"
           src="assets/img/documentwhite.png"
           class="img-fluid"
-        />
-        <img
-          *ngIf="checkBtn !== '1'"
+        /> -->
+        <!-- <img
+          *ngIf="checkBtn != '1'"
           src="assets/img/document.png"
           class="img-fluid"
-        />
+        /> -->
         เอกสาร
       </button>
 
       <button
-        (click)="onGroupChanged('2')"
+        (click)="onGroupsFilter('2')"
         [ngClass]="{
-          blueButton: checkBtn === '2',
+          blueButton: checkBtn == '2',
           whiteButton: checkBtn != '2'
         }"
       >
-        <img
-          *ngIf="checkBtn === '2'"
+        <!-- <img
+          *ngIf="checkBtn == '2'"
           src="assets/img/repairwhite.png"
           class="img-fluid"
         />
@@ -73,19 +74,19 @@
           *ngIf="checkBtn !== '2'"
           src="assets/img/repair.png"
           class="img-fluid"
-        />
+        /> -->
         การซ่อม
       </button>
 
       <button
-        (click)="onGroupChanged('3')"
+        (click)="onGroupsFilter('3')"
         [ngClass]="{
-          blueButton: checkBtn === '3',
+          blueButton: checkBtn == '3',
           whiteButton: checkBtn != '3'
         }"
       >
-        <img
-          *ngIf="checkBtn === '3'"
+        <!-- <img
+          *ngIf="checkBtn == '3'"
           src="assets/img/statwhite.png"
           class="img-fluid"
         />
@@ -93,7 +94,7 @@
           *ngIf="checkBtn !== '3'"
           src="assets/img/static.png"
           class="img-fluid"
-        />
+        /> -->
         ยอดขาย
       </button>
     </div>
